@@ -87,7 +87,7 @@
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "איפור ערב"}, "price": "500", "priceCurrency": "ILS"},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "איפור בת מצווה"}, "price": "450", "priceCurrency": "ILS"},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "הדבקת ריסים"}, "price": "120", "priceCurrency": "ILS"},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "קורס איפור אישי"}, "price": "1200", "priceCurrency": "ILS"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "קורס איפור אישי"}, "price": "1800", "priceCurrency": "ILS"},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "קורס מאפרת מקצועית"}, "price": "3000", "priceCurrency": "ILS"},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "איפור דוגמניות וצילומים", "description": "איפור מקצועי לצילומי אופנה, קמפיינים ופורטפוליו"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "איפור סלבריטיז ואירועי יוקרה", "description": "ניסיון עם אישיות ציבוריות, השקות ואירועי פרמייר"}}
@@ -346,18 +346,18 @@ nav.s {
 .section-title em { font-style:italic; color:var(--rose); }
 .sec-desc { font-size:14.5px; color:var(--text2); line-height:1.9; max-width:500px; margin-top:12px; }
 .svc-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid var(--divider); }
-.svc-card { padding:38px 28px; border-left:1px solid var(--divider); display:flex; flex-direction:column; position:relative; overflow:hidden; transition:background .3s; background:var(--white); }
+.svc-card { padding:44px 30px; border-left:1px solid var(--divider); display:flex; flex-direction:column; position:relative; overflow:hidden; transition:background .3s, box-shadow .3s, transform .3s; background:linear-gradient(160deg, var(--blush) 0%, var(--white) 70%); box-shadow:0 2px 12px rgba(196,103,126,0.06); }
 .svc-card:first-child { border-left:none; }
 .svc-card::after { content:''; position:absolute; top:0; right:0; left:0; height:2px; background:linear-gradient(to left,var(--rose),var(--gold)); transform:scaleX(0); transform-origin:right; transition:transform .4s var(--spring); }
-.svc-card:hover { background:var(--blush); }
+.svc-card:hover { background:linear-gradient(160deg, var(--blush2) 0%, var(--blush) 80%); box-shadow:0 8px 24px rgba(196,103,126,0.18); transform:translateY(-3px); }
 .svc-card:hover::after { transform:scaleX(1); }
-.svc-feat { background:var(--blush2); }
+.svc-feat { background:linear-gradient(160deg, var(--blush3) 0%, var(--blush2) 60%, var(--blush) 100%); box-shadow:0 4px 18px rgba(196,103,126,0.14); }
 .svc-feat::after { transform:scaleX(1); }
 .svc-badge { position:absolute; top:14px; left:14px; font-size:9px; letter-spacing:2px; text-transform:uppercase; font-weight:700; background:var(--gold); color:#fff; padding:4px 10px; }
-.svc-icon { font-size:26px; margin-bottom:18px; }
-.svc-name { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--text); margin-bottom:8px; line-height:1.2; }
-.svc-desc-t { font-size:13px; color:var(--text2); line-height:1.75; flex:1; margin-bottom:18px; }
-.svc-price { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:300; color:var(--rose); }
+.svc-icon { font-size:34px; margin-bottom:20px; }
+.svc-name { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:500; color:var(--text); margin-bottom:10px; line-height:1.2; }
+.svc-desc-t { font-size:14.5px; color:var(--text2); line-height:1.75; flex:1; margin-bottom:22px; }
+.svc-price { font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:500; color:var(--rose2); letter-spacing:-0.5px; }
 .svc-price span { font-size:13px; font-family:'Assistant',sans-serif; color:var(--text2); opacity:.6; margin-right:2px; }
 .svc-wide { grid-column:span 2; border-left:none; border-top:1px solid var(--divider); }
 .note-bar { display:flex; align-items:center; gap:12px; margin-top:22px; padding:15px 20px; border:1px solid var(--divider); background:var(--blush); color:var(--text2); font-size:13px; }
@@ -414,14 +414,14 @@ nav.s {
 /* ══ COURSES ══ */
 .courses-sec { padding:100px 60px; background:var(--cream); }
 .courses-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:64px; }
-.course-card { background:var(--white); border:1px solid var(--divider); overflow:hidden; transition:box-shadow .35s var(--spring), transform .35s var(--spring); }
+.course-card { background:var(--white); border:1px solid var(--rose-pale); border-radius:14px; overflow:hidden; box-shadow:0 4px 18px rgba(196,103,126,0.08); transition:box-shadow .35s var(--spring), transform .35s var(--spring); }
 .course-card:hover { box-shadow:0 16px 52px rgba(196,103,126,0.14); transform:translateY(-6px); }
-.course-top { padding:40px 36px 32px; background:linear-gradient(135deg,var(--blush2) 0%,var(--blush) 100%); text-align:center; border-bottom:1px solid var(--divider); position:relative; overflow:hidden; }
+.course-top { padding:44px 36px 36px; background:linear-gradient(135deg,var(--blush3) 0%,var(--blush2) 50%,var(--blush) 100%); text-align:center; border-bottom:1px solid var(--divider); position:relative; overflow:hidden; }
 .course-top::after { content:''; position:absolute; bottom:0; right:0; left:0; height:2px; background:linear-gradient(to left,var(--rose),var(--gold)); }
 .c-tag { display:inline-block; font-size:9px; letter-spacing:3.5px; text-transform:uppercase; font-weight:700; color:var(--rose); border:1px solid var(--rose-pale); padding:4px 12px; margin-bottom:16px; }
 .c-name { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; color:var(--text); margin-bottom:6px; line-height:1.15; }
 .c-meta { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text2); opacity:.55; margin-bottom:20px; }
-.c-price { font-family:'Cormorant Garamond',serif; font-size:52px; font-weight:300; color:var(--rose); line-height:1; }
+.c-price { font-family:'Cormorant Garamond',serif; font-size:56px; font-weight:500; color:var(--rose2); line-height:1; letter-spacing:-1px; }
 .c-cur { font-size:16px; font-family:'Assistant',sans-serif; color:var(--text2); opacity:.5; }
 .course-body { padding:32px 36px; }
 .c-desc { font-size:14px; color:var(--text2); line-height:1.9; margin-bottom:22px; }
@@ -543,12 +543,27 @@ footer a:hover { opacity:1; color:var(--rose); }
   .hero-content{width:100%;padding:110px 24px 60px; position:relative;}
   .hero-overlay{background:rgba(255,251,248,.88);}
   .svc-sec,.courses-sec,.testi-sec,.ai-sec,.cta-sec,.reels-sec{padding:72px 20px;}
-  .svc-grid{grid-template-columns:1fr;}
-  .svc-card{border-left:none;border-top:1px solid var(--divider);}
+  .svc-grid{grid-template-columns:1fr; gap:18px; padding:0 4px;}
+  .svc-card{border-left:none; border-top:none; border:2px solid var(--rose-pale); border-radius:18px; padding:32px 24px; background:linear-gradient(155deg, var(--blush) 0%, #fff 85%); box-shadow:0 6px 20px rgba(196,103,126,0.12); margin-bottom:0;}
+  .svc-card:first-child{border-top:2px solid var(--rose-pale);}
+  .svc-feat{border:2px solid var(--rose); background:linear-gradient(155deg, var(--blush3) 0%, var(--blush2) 60%, var(--blush) 100%); box-shadow:0 8px 26px rgba(196,103,126,0.22);}
+  .svc-icon{font-size:42px; margin-bottom:16px;}
+  .svc-name{font-size:26px; font-weight:600; margin-bottom:12px;}
+  .svc-desc-t{font-size:15px; margin-bottom:20px;}
+  .svc-price{font-size:44px; font-weight:600; color:var(--rose2); padding-top:10px; border-top:1px solid var(--rose-pale);}
+  .svc-price span{font-size:18px;}
+  .svc-badge{font-size:10px; padding:5px 12px;}
   .about-inner{padding:72px 24px;}
   .photo-banner{height:340px;}
   .pb-content{padding:32px 24px;}
   footer{padding:28px 20px;}
+  .c-price{font-size:64px; font-weight:600; letter-spacing:-1.5px;}
+  .c-cur{font-size:20px;}
+  .course-top{padding:36px 28px 30px;}
+  .c-name{font-size:28px;}
+  .course-body{padding:28px 28px;}
+  .courses-grid{gap:22px; padding:0 4px;}
+  .course-card{border:2px solid var(--rose-pale); border-radius:18px; box-shadow:0 8px 26px rgba(196,103,126,0.14);}
 }
 
 /* ══ ACCESSIBILITY WIDGET ══ */
@@ -824,7 +839,7 @@ details[open] .faq-icon { transform:rotate(45deg); background:var(--rose); color
         <div class="c-tag">קורס אישי</div>
         <div class="c-name">לימוד איפור עצמי</div>
         <div class="c-meta">מפגש אחד · כ־3 שעות</div>
-        <div class="c-price">1,200 <span class="c-cur">₪</span></div>
+        <div class="c-price">1,800 <span class="c-cur">₪</span></div>
       </div>
       <div class="course-body">
         <p class="c-desc">מפגש אישי שבו תלמדי בדיוק מה מחמיא לך — ורק לך. חוויה שמותאמת לפנים שלך ולחיים שלך.</p>
@@ -1158,7 +1173,7 @@ document.querySelectorAll('[data-c]').forEach(el=>co.observe(el));
 /* AI CHAT */
 const SYS=`אתה יועצת AI של מאפרת מקצועית בשם נעה ברק מירושלים.
 נעה מתמחה בכלות, דוגמניות, סלבריטיז וקהל הדתי והחרדי. מקבלת בסטודיו הביתי בירושלים ומגיעה לבית הלקוחה בכל הארץ.
-השירותים: איפור כלה 1,200₪ · מלווה 500₪ · ערב 500₪ · בת מצווה 450₪ · ריסים 120₪ · דוגמניות/צילומים לפי הצעה · סלבריטיז/אירועי יוקרה לפי הצעה · קורס אישי 1,200₪ · קורס מקצועי 3,000₪.
+השירותים: איפור כלה 1,200₪ · מלווה 500₪ · ערב 500₪ · בת מצווה 450₪ · ריסים 120₪ · דוגמניות/צילומים לפי הצעה · סלבריטיז/אירועי יוקרה לפי הצעה · קורס אישי 1,800₪ · קורס מקצועי 3,000₪.
 לקביעת תור: WhatsApp 0559569455.
 ענה בעברית בלבד, בחום ובמקצועיות, עד 3 משפטים.`;
 let hist=[];
